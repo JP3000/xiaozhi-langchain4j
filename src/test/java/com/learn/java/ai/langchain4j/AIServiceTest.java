@@ -1,7 +1,10 @@
 package com.learn.java.ai.langchain4j;
 
 import com.learn.java.ai.langchain4j.assistant.Assistant;
+import com.learn.java.ai.langchain4j.assistant.MemoryChatAssistant;
+import com.learn.java.ai.langchain4j.config.MemoryChatAssistantConfig;
 import dev.langchain4j.community.model.dashscope.QwenChatModel;
+import dev.langchain4j.memory.chat.MessageWindowChatMemory;
 import dev.langchain4j.service.AiServices;
 import dev.langchain4j.service.spring.AiService;
 import org.junit.jupiter.api.Test;
@@ -31,4 +34,5 @@ public class AIServiceTest {
         String answer = assistant.chat("Who are you?");
         System.out.println(answer);
     }
+
 }
